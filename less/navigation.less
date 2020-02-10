@@ -1,1 +1,43 @@
-// Navigation code here
+// Navigation
+
+nav{
+    background: #f3f3f3cc;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+	position:sticky;
+	left:0;
+	top:0;
+	width:100%;
+	border-bottom:1px solid rgba(0, 0, 0, 0.1);
+	text-align: center;
+	.nav-content{
+		a.logo{
+			h1{
+				font-size:4rem;
+				padding-top:1.25rem;
+				padding-bottom:0.75rem;
+			}
+		}
+		ul.nav-links{
+			.flex-props(nowrap, center, center);
+			li{
+				a{
+					text-decoration: none;
+					p{
+						color:#5E6164;
+						text-decoration: none;
+						padding:0.5em 1em;
+						@media @mobile{
+							padding:0.5em 0.75em;
+						}
+					}
+					&:hover{
+						p{
+
+						}
+					}
+				}
+			}
+		}
+	}
+}
