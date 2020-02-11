@@ -4,6 +4,11 @@
 
   .intro {
 
+    img{
+      border-radius:5px;
+      max-width:100vw;
+    }
+
     h2 {
       padding: 15px;
     }
@@ -24,6 +29,16 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @phone{
+        width:100%;
+        border-radius:15px;
+        margin: 20px 15px;
+      }
+      &.sky, &.launch{
+        @media @phone{
+          display:none;
+        }
+      }
     }
   }
 
@@ -45,7 +60,11 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
-
+    @media @phone{
+      margin-top:20px;
+      flex-wrap: wrap-reverse;
+      padding:15px 15px;
+    }
     .walk-text {
       width: 50%;
 
@@ -58,6 +77,19 @@
       }
 
       .btn {
+        .solid-btn-props(#22273A, 1.85rem,.5em 1.1em);
+        display:inline-block;
+        @media @phone{
+          display:block;
+          padding:1.25em;
+          font-size:2.1rem;
+        }
+        &:hover{
+          .transition(all 200ms linear);  
+          background-color:#fff;
+          box-shadow:0 0 0 2px #22273A inset;
+          color:#22273A;
+        }
       }
     }
 
@@ -69,6 +101,16 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }
+    }
+
+    @media @phone{
+      div.walk-text,div.walk-img{
+        width:100%;
+        margin:0 auto;
+      }
+      div.walk-text{
+        padding:20px 0;
       }
     }
   }
